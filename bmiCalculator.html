@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Body Mass Index Calculator</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../DPP-project/stylesheet.css">
+   <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Eczar:800" rel="stylesheet">
+    
+     
+</head>
+
+    <body>
+        
+    <div class= "main">
+        <h1> BODY INDEX MASS </h1> 
+         <h2>CALCULATOR</h2>
+        <b> <p id= "info1"> </p></b> 
+        
+        <div id="text1"></div>   
+        
+        <b><p id = "info">
+        <p>
+            
+        <div id="Calculation">
+        
+        <form>
+        <!--<input type="radio" id ="childRadio" name="gender" value="child"  > Child
+        <input type="radio" id ="adultRadio" name="gender" value="adult"> Adult <br>-->
+        <div id="formInput">
+        <p><a href="#" id="changeUnit" type="button" class="UnitButton">IMPERIAL</a> </p>
+        <br />
+       
+        
+        Weight: <input type = "weight" id= "userWeight" size ="2"/> <span id="userWeight1" value ="2"> </span> 
+          <br /> <br/>
+        Height: <input type="height" id="userHeight"  size="2" />  <span id="userHeight1" value ="1"> </span>
+          
+        <br /> <br/>
+        BMI Result: <input type = "result" id= "result" size= "2"/> kg/m<sup>2 </b> 
+        </div>
+            
+        <!--canvasjs-->
+        <div id="chartContainer" >
+        </div>
+       
+        <div id="BMIResult"> Your result here </div>
+        <br /> 
+       
+            
+       
+        
+        <div id="buttons">
+            <a href="#" id="Calculate" type="button" class="submitButton corners hide">CALCULATE BMI</a>
+
+            <a href="#" id="Reset" type="button" value= "reset" class="submitButton corners hide">RESET</a>
+        </div>                
+        <br />
+        
+        </div>
+            
+        <br><br>
+        </form>
+      
+    </p>  
+
+    </div>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>    
+   <!-- <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>-->
+    <script src="BMIcalculator.js"> </script>
+    </body>
+
+
+
+</html>
