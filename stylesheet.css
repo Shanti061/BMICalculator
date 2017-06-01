@@ -1,0 +1,269 @@
+body { 
+    
+    background-image:url(exercise.jpg);
+    background-position: right;
+    background-size: 140% 140%;
+    background-repeat: no-repeat;
+    
+    
+    }
+
+/*html {
+    
+    height: auto
+}*/
+/*img{
+        
+        width: 100%;
+        height: auto;
+        
+    }*/
+
+.main{
+margin-right: auto;
+margin-left: auto;
+width: 50%; 
+text-align: center;
+border: 5px solid black; 
+border-radius: 15px;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-family: 'Aclonica', sans-serif;
+    text-align: center;
+    text-shadow: 1px 10px 3px #606066;
+}
+
+h2{
+     font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 3px #666666;
+}
+
+#formInput{
+    float: left;
+    width: 40%;
+}
+
+#chartContainer{
+    height: 200px; 
+    width: 50%;
+    padding-left: 70px;
+}
+
+.canvasjs-chart-credit{
+    
+}
+
+#Calculation{
+    text-align: left;
+    padding-left:20px;
+   
+}
+
+
+#info{
+    
+    color: red;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#info1{
+    color:black;
+    
+    font-family:'Eczar', serif;
+    text-decoration-style:solid;
+    font-size: 25px;
+  text-align: center;
+}
+
+#BMIResult{
+    text-align: left;
+    color: blue;
+    font-family:fantasy;
+    font-size: 30px;
+    font-style: Times New Roman;
+    font-weight: bold;
+}
+
+#buttons{
+     margin-top:30px;
+    text-align: center;
+}
+
+.submitButton {
+    color: white; 
+    font-size: 1.5em;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: rgba(139, 10, 0, 0.8);	
+    border: 3px;
+    border-radius: 8px;
+   
+    margin-right: 20px;
+}
+
+.submitButton:hover {background-color: chocolate;}
+
+
+.UnitButton {
+    color: whitesmoke; 
+    font-size: 0.9em;
+    padding: 10px 10px;
+    text-decoration: none;
+    background-color:rgba(139, 10, 0, 0.8);	
+    border: 3px;
+    border-radius: 2px;
+    margin-bottom:20px;
+    margin-left: 10px;
+}
+
+.UnitButton:hover {background-color:chocolate;}
+
+
+/*MEDIA QUERIES  */
+
+@media only screen and (max-width: 390px){
+    .main{width:100%; } 
+    #chartContainer{
+        width: 100% !important;
+        clear: both !important;
+        padding: 0 !important;
+    }
+    #Calculation{margin-left: 0;}
+    
+    #formInput {
+        
+        width: 100% !important;
+       
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .main{width:50%;
+   
+        padding: 0;
+    }
+    #Calculation{margin-left: 0;}
+    #chartContainer{width: 20%;}
+    h1 { font-size: 20px; }
+    h2 { font-size:16px;}
+    #info{font-size: 10px;}
+     #info1{font-size: 8px;}
+   /* #calculation{font-size: 10px;}*/
+    .UnitButton{font-size: 10px; margin: 0;}
+   .submitButton {
+   /* float: left;*/
+    font-size: 10px;
+    padding: 5px;
+    margin: 0 auto;
+    
+}
+    #BMIResult{font-size: 12px;}
+    #userWeight1, #userHeight1, #result{font-size: 10px;}
+}
+
+/*@media only screen and (max-width: 619px){
+    .main{width: 70%;}
+    #chartContainer{width: auto;}
+}*/
+@media only screen and (max-width: 697px){
+    
+     .main{width:100%; } 
+    #chartContainer{
+        width: 100% !important;
+        clear: both !important;
+        padding: 0 !important;
+    }
+    #Calculation{margin-left: 0;}
+    
+    #formInput {
+        
+        width: 100% !important;
+       
+    }
+    
+    
+    
+    
+   /* .main{width: 50%;
+    border: 3px solid black; 
+    border-radius: 10px;
+        padding: 20px;
+    }
+    #chartContainer{width: 20%;}
+    .submitButton {
+  
+    font-size: 10px;
+    padding: 5px;
+    margin: 0 auto;
+}
+     #Calculation{padding-left: 10px;}*/
+    #UnitButton{margin: 0;}
+    
+    #userWeight1, #userHeight1, #result{font-size: 12px;}
+    #BMIResult{font-size: 20px;}
+    
+}
+    
+    
+@media only screen and (max-width: 728px){
+    /*for mobile phones */
+    /*background-size:100% 100%;*/
+    .main{width:50%;
+    margin: 0 auto;}
+    
+    
+    h1 { font-size: 20px; }
+    h2 { font-size:16px;}
+    #info{font-size: 15px;}
+     #info1{font-size: 15px;}
+    .UnitButton{font-size: 10px;}
+  
+    .submitButton{font-size: 12px; margin: 0;
+        padding: 5px;}
+
+}
+
+@media only screen and (max-width:900px){
+    .main{width: 50%}
+    #chartContainer{ width: 60%;
+        padding-right: 0;
+        
+    }
+    #Calculation{padding-left: 10px;}
+    #formInput{width: 35%; margin-left:0; margin-right: 0;}
+    /*axisX: {       
+        labelFontSize: 10; }*/
+}
+
+@media only screen and (max-width: 1130px){
+   /*for desktop*/
+    .main{ width: 50%;}
+.submitButton{font-size: 12px; margin: 0;}
+     h1 { font-size: 25px; }
+    h2 { font-size:16px;}
+    #info1{font-size: 15px;}
+    #buttons{float: left; font-size: 10px; margin: 10px; padding: 0;}
+    
+    
+}
+
+/*@media only screen and (min-width: 1131px){
+    background-image:url(exercise.jpg);
+   
+    body{ background-size:right !important;
+        background-repeat: no-repeat;
+    }
+}*/
+
+@media only screen and (max-width: 990px){
+    
+    .main{ width: 60%;}
+    #chartContainer{padding-right: 15px;}
+}
