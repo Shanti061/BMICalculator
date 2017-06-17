@@ -1,6 +1,4 @@
 
-
-
 var BMI;
 var calculate;
 var getBMI;
@@ -31,25 +29,39 @@ function calculateBMI () {
 
 var height1 = parseFloat(document.getElementById("userHeight").value);
 var weight1 = parseFloat(document.getElementById("userWeight").value);
-    //metric calculation, height in meter, weight in kg
-if(input1 === "Meter" && input2 === "Kg")
-    {
-  BMI = parseInt((weight1 / (height1 * height1) ));
-      //to show the value inside the textbox for the result
-   document.getElementById("result").value= BMI;
-     }
+var alpha = /^[A-Za-z]+$/;     
     
-    else{
-        BMI = ((weight1 * 703)/(height1 * height1)) ;
-        document.getElementById("result").value= BMI;
-        }
-    
-    
-    
-    resultInfo(BMI);
+  
+if(height1 <=0 || weight1 <=0){
+    document.getElementById("BMIResult").innerHTML="Please enter the correct data.";
     
 }
+else if (userHeight.value.match(alpha) || userWeight.value.match(alpha)) 
+   {
+    document.getElementById("BMIResult").innerHTML="Please enter numeric value";
+    document.getElementById("result").value= "";
+  }
 
+else{
+        //metric calculation, height in meter, weight in kg
+    if(input1 === "Meter" && input2 === "Kg")
+        {
+      BMI = parseInt((weight1 / (height1 * height1) ));
+          //to show the value inside the textbox for the result
+       document.getElementById("result").value= BMI;
+         }
+
+        else{
+            BMI = ((weight1 * 703)/(height1 * height1)) ;
+            document.getElementById("result").value= BMI;
+            }
+
+
+
+        resultInfo(BMI);
+
+     }
+}
 
 
 console.log(getBMI);
@@ -88,28 +100,28 @@ function resultInfo(BMI)
         {
             document.getElementById("BMIResult").innerHTML = "You are severly thin!";
         }
-    else if(BMI >16 && BMI < 17)
+    else if(BMI >16 && BMI <= 17)
         {
             document.getElementById("BMIResult").innerHTML = "Moderate thinness!";
         }
     
-    else if(BMI >17 && BMI < 18.5)
+    else if(BMI >17 && BMI <= 18.5)
         {
             document.getElementById("BMIResult").innerHTML = "Mild thinness!";
         }
-    else if(BMI >18.5 && BMI < 25)
+    else if(BMI >18.5 && BMI <= 25)
         {
             document.getElementById("BMIResult").innerHTML = "Normal weight!";
         }
-    else if(BMI >25 && BMI < 30)
+    else if(BMI >25 && BMI <= 30)
         {
             document.getElementById("BMIResult").innerHTML = "Over Weight!";
         }
-    else if(BMI >30 && BMI < 35)
+    else if(BMI >30 && BMI <= 35)
         {
             document.getElementById("BMIResult").innerHTML = "Obese Class I";
         }
-    else if(BMI >35 && BMI < 40)
+    else if(BMI >35 && BMI <= 40)
         {
             document.getElementById("BMIResult").innerHTML = "Obese Class II";
         }
@@ -120,7 +132,8 @@ function resultInfo(BMI)
     
     else 
         {
-            document.getElementById("BMIResult").innerHTML = "Please enter  the above fields to get your BMI calculation.";
+            document.getElementById("BMIResult").innerHTML = "Please enter values to get your BMI calculation.";
+            document.getElementById("result").value= "";
         }
     
     getBMI = BMI;
